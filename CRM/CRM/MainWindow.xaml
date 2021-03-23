@@ -24,33 +24,56 @@
                 </Button>
             </StackPanel>
         </Grid>
-        <Grid Height="100">
+        <Grid Height="50">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10 0">
-                <Button Uid="0" Width="150" Content="HOME" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3"  Click="Button_Click"/>
-                <Button Uid="1" Width="150" Content="PROJECT" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3"  Click="Button_Click"/>
-                <Button Uid="2" Width="150" Content="CLIENTS" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3"  Click="Button_Click"/>
-                <Button Uid="3" Width="150" Content="HOME" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3"  Click="Button_Click"/>
-                <Button Uid="4" Width="150" Content="HOME" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3"  Click="Button_Click"/>
-                <Button Uid="5" Width="150" Content="HOME" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3"  Click="Button_Click"/>
-                <Button Uid="6" Width="150" Content="HOME" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3"  Click="Button_Click"/>
+                <Button x:Name="homeBtn" Uid="0" Width="150" Content="HOME" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3"  Click="Button_Click"/>
+                <Button Uid="1" Width="150" Content="PROJECT" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3"  Click="Button_Click"/>
+                <Button Uid="2" Width="150" Content="CLIENTS" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3"  Click="Button_Click"/>
+                <Button Uid="3" Width="150" Content="HOME" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3"  Click="Button_Click"/>
+                <Button Uid="4" Width="150" Content="HOME" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3"  Click="Button_Click"/>
+                <Button Uid="5" Width="150" Content="HOME" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3"  Click="Button_Click"/>
+                <Button Uid="6" Width="150" Content="HOME" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3"  Click="Button_Click"/>
             </StackPanel>
-            <Grid x:Name="GridCursor" Width="150" Height="5" Background="#FF2196F3" HorizontalAlignment="Left" Margin="10 0"></Grid>
+            <Grid x:Name="GridCursor" Width="150" Height="3" Background="#FF2196F3" HorizontalAlignment="Left" Margin="10 47"></Grid>
         </Grid>
-        <Grid x:Name="MainGrid" Height="860" Background="Gray">
-            <Grid x:Name="GridDashboard" Height="860" Background="Yellow">
-
-            </Grid>
-            <Grid x:Name="GridProject" Height="860" Background="Blue">
-
-            </Grid>
-          
-            <Grid x:Name="GridCLient" Height="860" Background="gray">
+        <Grid x:Name="MainGrid" Height="960" Background="Gray">
+            <Grid x:Name="GridProject" Height="960" Background="Transparent">
 
             </Grid>
 
-           
+            <Grid x:Name="GridClient" Height="960" Background="Transparent">
+
+            </Grid>
+
+
+            <Grid x:Name="GridDashboard" Height="960" Background="LightPink" ShowGridLines="True">
+                <ScrollViewer VerticalScrollBarVisibility="Hidden" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                           
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Border CornerRadius="25" Grid.Column="0"  Grid.Row="0"  Background="red" />
+                        <Border CornerRadius="25" Grid.Column="1"  Grid.Row="0"  Background="Purple" />
+                        <Border CornerRadius="25" Grid.Column="2"  Grid.Row="0"  Background="Orchid" />
+                        <Border CornerRadius="25" Grid.Column="3"  Grid.Row="0"  Background="AntiqueWhite" />
+
+                    </Grid>                 
+
+                </ScrollViewer>
+            </Grid>
+
         </Grid>
 
-       
     </StackPanel>
 </Window>

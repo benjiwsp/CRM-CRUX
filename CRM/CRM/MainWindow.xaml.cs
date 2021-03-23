@@ -23,6 +23,7 @@ namespace CRM
         public MainWindow()
         {
             InitializeComponent();
+            changePanel(MainGrid);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -42,7 +43,7 @@ namespace CRM
                     changePanel(GridProject);
                     break;
                 case 2:
-                    changePanel(GridCLient);
+                    changePanel(GridClient);
                     break;
                 case 3:
                     break;
@@ -65,7 +66,7 @@ namespace CRM
             List<Grid> gridList = new List<Grid>() 
             { GridDashboard, 
               GridProject,
-              GridCLient
+              GridClient
             }; 
           foreach (Grid grid in gridList){
                 if (selectedGrid == grid)
